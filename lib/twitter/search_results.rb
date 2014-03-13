@@ -35,7 +35,7 @@ module Twitter
 
     # @return [Boolean]
     def next_page?
-      !!@attrs[:search_metadata][:next_results] unless @attrs[:search_metadata].nil?
+      !!@attrs['search_metadata']['next_results'] unless @attrs['search_metadata'].nil?
     end
 
     # Returns a Hash of query parameters for the next result in the search
@@ -44,7 +44,7 @@ module Twitter
     # @return [Hash] The parameters needed to fetch the next page.
     def next_page
       if next_page?
-        query_string_to_hash(@attrs[:search_metadata][:next_results])
+        query_string_to_hash(@attrs['search_metadata']['next_results'])
       end
     end
 
@@ -58,7 +58,7 @@ module Twitter
     # @return [Hash]
     def attrs=(attrs)
       @attrs = attrs
-      @attrs.fetch(:statuses, []).collect do |tweet|
+      @attrs.fetch('statuses', []).collect do |tweet|
         @collection << Tweet.new(tweet)
       end
       @attrs

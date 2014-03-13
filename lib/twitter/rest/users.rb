@@ -224,7 +224,7 @@ module Twitter
       # @overload users(*users, options)
       #   @param users [Enumerable<Integer, String, Twitter::User>] A collection of Twitter user IDs, screen names, or objects.
       #   @param options [Hash] A customizable set of options.
-      #   @option options [Symbol, String] :method Requests users via a GET request instead of the standard POST request if set to ':get'.
+      #   @option options [String, Symbol] :method Requests users via a GET request instead of the standard POST request if set to ':get'.
       #   @option options [Boolean] :include_entities The tweet entities node will be disincluded when set to false.
       def users(*args)
         arguments = Twitter::Arguments.new(args)
