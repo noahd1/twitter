@@ -8,6 +8,7 @@
 [![Gittip](http://img.shields.io/gittip/gems.svg)][gittip]
 [![Inline docs](http://inch-pages.github.io/github/sferik/twitter.png)][inchpages]
 
+
 [gem]: https://rubygems.org/gems/twitter
 [travis]: http://travis-ci.org/sferik/twitter
 [gemnasium]: https://gemnasium.com/sferik/twitter
