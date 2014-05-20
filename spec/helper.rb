@@ -1,12 +1,5 @@
-require 'simplecov'
-require 'coveralls'
-
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter]
-
-SimpleCov.start do
-  add_filter '/spec/'
-  minimum_coverage(99.15)
-end
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 require 'twitter'
 require 'rspec'
@@ -15,7 +8,7 @@ require 'tempfile'
 require 'timecop'
 require 'webmock/rspec'
 
-WebMock.disable_net_connect!(:allow => 'coveralls.io')
+WebMock.disable_net_connect!(:allow => 'codeclimate.com')
 
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
